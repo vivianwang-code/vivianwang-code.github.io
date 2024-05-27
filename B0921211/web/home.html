@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B0921211 web</title>
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/slicebox.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+    <style>
+        body {
+            line-height: 2.5; 
+	    font-family: Palatino;
+        }
+        .container {
+            text-align: center;
+        }
+        .title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: #4F4F4F;
+        }
+        .title_begin {
+            color: #6C6C6C;
+            font-size: 25px;
+            text-align: center;
+            font-family: Georgia;
+            font-weight: bold;
+            padding: 3px;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #BB5E00;
+            text-align: center;
+            font-weight: bold;
+        }
+        .index {
+            font-size: 15px;
+            color: #5B5B5B;
+            text-align: center;
+        }
+        .index ul {
+            list-style-type: disc;
+            padding-left: 20px; 
+            text-align: left; 
+            display: inline-block; 
+        }
+        .map, .flag {
+            width: 50%;
+            height: auto;
+            border: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="title_begin">
+        <p>Why go to the UK for a master's degree?</p>
+    </div>
+    <div class="subtitle">
+        Internationally renowned top universities and outstanding research achievements.
+    </div>
+    <div class="index">
+        Obtain a globally recognized degree! Nearly 20 of the top 100 universities in the world are in the UK.
+    </div>
+    <div class="subtitle">
+        One-year master's programs save time and money.
+    </div>
+    <div class="index">
+        <ul>
+            <li>The one-year program is divided into 3 terms, with the final term usually focused on thesis writing.</li>
+            <li>Compared to studying in the US, you can obtain a master's degree with lower tuition fees.</li>
+        </ul>
+    </div>
+    <div class="subtitle">
+        No GRE scores required for admission.
+    </div>
+    <div class="index">
+        Most UK master's programs do not require students to provide GRE scores.
+    </div>
+    <div class="subtitle">
+        Conditional admission is possible.
+    </div>
+    <div class="index">
+        <ul style="font-family: Palatino; text-align:center;padding-left:110px;padding-right:100px;">
+            <li>You can submit recommendation letters/introductions/study plans, and later submit English proficiency test scores upon receiving conditional admission.</li>
+            <li>If your English proficiency scores do not meet the school's requirements, you can advance through the school's pre-sessional courses.</li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <div class="container">
+            <div class="codrops-top clearfix">
+                <span class="right"></span>
+            </div>
+            <div class="wrapper">
+                <ul id="sb-slider" class="sb-slider">
+                    <li>
+                        <img src="image/ucl.jpg" alt="image1"/>
+                    </li>
+                    <li>
+                        <img src="image/london school.jpg" alt="image2"/>
+                    </li>
+                    <li>
+                        <img src="image/london_2.jpg" alt="image3"/>
+                    </li>
+                    <li>
+                        <img src="image/glasgow.jpg" alt="image4"/>
+                    </li>
+                    <li>
+                        <img src="image/bristol.jpg" alt="image5"/>
+                    </li>
+                    <li>
+                        <img src="image/cambridge.jpg" alt="image6"/>
+                    </li>
+                    <li>
+                        <img src="image/durham.jpg" alt="image7"/>
+                    </li>
+                </ul>
+                <div id="shadow" class="shadow"></div>
+                <div id="nav-arrows" class="nav-arrows">
+                    <a href="#">Next</a>
+                    <a href="#">Previous</a>
+                </div>
+                <div id="nav-options" class="nav-options">
+                    <span id="navPlay">Play</span>
+                    <span id="navPause">Pause</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slicebox.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var Page = (function() {
+                var $navArrows = $('#nav-arrows').hide(),
+                    $navOptions = $('#nav-options').hide(),
+                    $shadow = $('#shadow').hide(),
+                    slicebox = $('#sb-slider').slicebox({
+                        onReady: function() {
+                            $navArrows.show();
+                            $navOptions.show();
+                            $shadow.show();
+                        },
+                        orientation: 'h',
+                        cuboidsCount: 3
+                    }),
+                    init = function() {
+                        initEvents();
+                    },
+                    initEvents = function() {
+                        $navArrows.children(':first').on('click', function() {
+                            slicebox.next();
+                            return false;
+                        });
+                        $navArrows.children(':last').on('click', function() {
+                            slicebox.previous();
+                            return false;
+                        });
+                        $('#navPlay').on('click', function() {
+                            slicebox.play();
+                            return false;
+                        });
+                        $('#navPause').on('click', function() {
+                            slicebox.pause();
+                            return false;
+                        });
+                    };
+                return { init: init };
+            })();
+            Page.init();
+        });
+    </script>
+</body>
+</html>
