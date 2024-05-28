@@ -6,41 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B0921211 web</title>
     <style>
+        body {
+            font-family: Palatino;
+        }
 
-	body{
-		font-family: Palatino;
-	}
-
-	.button {
-	    font-family: Palatino;
+        .button {
+            font-family: Palatino;
             padding: 0px;
             font-size: 16px;
-            background-color:#FFFFFF;
+            background-color: #FFFFFF;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             outline: none;
-            transition: transform 0.2s ease; /* 添加變換過渡效果 */
-	    font-weight: bold;
+            transition: transform 0.2s ease;
+            font-weight: bold;
         }
 
         .button:hover {
-            transform: scale(1.1); /* 鼠標懸停時放大按鈕 */
+            transform: scale(1.1);
         }
 
-	.effect-container {
+        .effect-container {
             display: flex;
             justify-content: space-around;
             margin: 5px;
         }
 
         .effect-btn {
-	    font-family: Palatino;
-            //padding: 10px 20px;
+            font-family: Palatino;
             font-size: 13px;
             background-color: #E0E0E0;
-            color: 	#000000;
+            color: #000000;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -62,6 +60,7 @@
             0% {
                 transform: translateY(0);
             }
+
             100% {
                 transform: translateY(100vh);
             }
@@ -89,287 +88,270 @@
             animation: fall 5s linear infinite;
         }
 
-
-	.content-container {
+        .content-container {
             position: relative;
             width: 100%;
             height: 100%;
-		border: none;
+            border: none;
         }
 
         table {
-		width: 900px;
-		height: 1730px;
-		border-collapse: collapse;
-		padding: 10px;
+            width: 900px;
+            height: 1730px;
+            border-collapse: collapse;
+            padding: 10px;
         }
 
-        th, td {
-            border: 1px ;
+        th,
+        td {
+            border: 1px;
             padding: 0;
             background-color: white;
         }
-	
-	a {
-    		color: black;
-	}
 
+        a {
+            color: black;
+        }
 
-	ul, li{
-		text-align : left;
-		line-height: 1.75;
-		color: #4F4F4F;
-		
-	}
-	
+        ul,
+        li {
+            text-align: left;
+            line-height: 1.75;
+            color: #4F4F4F;
+        }
 
-        #top_table { 
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 1000;
-		width: 100%;
-		height: 30px;
-		border-bottom: 1px solid gray;
-		//background-color: #D1E9E9;
-		
+        #top_table {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            width: 100%;
+            height: 30px;
+            border-bottom: 1px solid gray;
         }
 
         #button_table {
-		position: fixed;
-		top: 30px;
-		left: 0;
-		z-index: 1000;
-		width: 100%;
-		height: 85px;
+            position: fixed;
+            top: 30px;
+            left: 0;
+            z-index: 1000;
+            width: 100%;
+            height: 85px;
         }
 
-	#header_table {
-            	width: 1000px;
-            	height: 600px;
-		border: 0;
-		padding: 0;
+        #header_table {
+            width: 1000px;
+            height: 600px;
+            border: 0;
+            padding: 0;
         }
 
-	#blank_table{
-		width: 160px;
-		height: 900px;
-		
-	}
+        #blank_table {
+            width: 160px;
+            height: 900px;
+        }
 
-	#separate_table{
-		width: 50px;
-		height: 900px;
-		
-	}
-        
+        #separate_table {
+            width: 50px;
+            height: 900px;
+        }
+
         #me_table {
-		width: 300px;
-		height: 900px;
-		padding:30px;
-		border: 1.75px solid #9D9D9D;
-		border-top: 1.75px solid #9D9D9D;
-		padding-top: 40px;
-		margin-top: 0;
-		vertical-align: top;
+            width: 300px;
+            height: 900px;
+            padding: 30px;
+            border: 1.75px solid #9D9D9D;
+            border-top: 1.75px solid #9D9D9D;
+            padding-top: 40px;
+            margin-top: 0;
+            vertical-align: top;
         }
 
         #introduction_table {
-		width: 400px;
-		height: 900px;
-		padding:0;
-		//border: 1px solid #BEBEBE;
-		//border-top: 1px solid #BEBEBE;
+            width: 400px;
+            height: 900px;
+            padding: 0;
         }
 
-	#footer_blank_table{
-		width: 100vw;
-		height: 30px;
-	}
+        #footer_blank_table {
+            width: 100vw;
+            height: 30px;
+        }
 
         #footer_table {
-		width: 100vw;
-		height: 100px;
-		background-color: 	#E0E0E0;
+            width: 100vw;
+            height: 100px;
+            background-color: #E0E0E0;
         }
 
         #header_image {
-		width: 100vw;
-		height: 500px;
-		object-fit: cover;
-		border: 0;
-		padding: 0;
-		
+            width: 100vw;
+            height: 500px;
+            object-fit: cover;
+            border: 0;
+            padding: 0;
         }
 
-	#button_image{
-		width: 110px;
-		height: auto;
-	}
+        #button_image {
+            width: 110px;
+            height: auto;
+        }
 
-	#me_image{
-		width: 80%;
-		height:auto;
-		object-fit: contain;
-		object-position: top;
-		margin-bottom: 15px;
-		text-align: center;
-		margin-top: 0;
-	}
+        #me_image {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            object-position: top;
+            margin-bottom: 15px;
+            text-align: center;
+            margin-top: 0;
+        }
 
+        .button_links {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+        }
 
+        .button_link {
+            display: inline-block;
+            width: 170px;
+            height: 50px;
+            margin-right: 10px;
+            background-color: white;
+            text-align: center;
+            justify-content: center;
+            line-height: 50px;
+            text-decoration: none;
+            color: #5B5B5B;
+            border-right: 0.5px solid gray;
+            border-left: none;
+            padding-right: 15px;
+            font-size: 17px;
+        }
 
-	.button_links{
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		height: 80px;
-	}
+        #marquee_text {
+            font-size: 15px;
+            color: #7B7B7B;
+        }
 
-	.button_link{
-		display: inline-block;
-		width: 170px;
-		height: 50px;
-		margin-right: 10px;
-		background-color: white;
-		text-align: center;
-		justify-content: center;
-		line-height: 50px;
-		text-decoration: none;
-		color:#5B5B5B;
-		border-right: 0.5px solid gray;
-		border-left: none;
-		padding-right: 15px;
-		font-size: 17px;
-		
-	}
-	
-	#marquee_text{
-		font-size: 15px;
-		color:#7B7B7B;
-	}
-
-	.footer{
-		font-size: 13px;
-		color: #5B5B5B;
-		line-height: 1;
-	}
-
-
+        .footer {
+            font-size: 13px;
+            color: #5B5B5B;
+            line-height: 1;
+        }
     </style>
 </head>
 
 <body>
     <table>
         <tr>
-            <th id="top_table" ><marquee id="marquee_text" scrollamount="10">Welcome to my website. I hope this website can assist you on your journey to study abroad in the UK</marquee>
-		</th>
-        </tr>
-        <tr>
-		<th id="button_table" colspan="6">
-			<span class="button_links">
-				<figure>
-				<a href="index.html">
-				<img id="button_image" src="image/flag.jpg">	
-				</a>
-				<figcaption style="font-size:10px; border:0px; color:#7B7B7B;">HOME</figcaption>
-				</figure>
-				<a class="button_link" href="flow_web.html" target="introduction" >  <button class="button">Application Process</a></button>
-				<a class="button_link" href="english_web.html" target="introduction"><button class="button">English Test</a></button>
-				<a class="button_link" href="ranking_web.html" target="introduction"><button class="button">Rankings</a></button>
-				<a class="button_link" href="document_web.html" target="introduction"><button class="button">Required Documents</a></button>
-				<a class="button_link" href="about_the_website_web.html" target="introduction"><button class="button">About the Website</a></button>
-			</span>
-		</th>
-        </tr>
-        <tr id="header_table">
-            <th  colspan="7">
-                <img id="header_image" src="image/london_2.jpg" >  
-		<p>              
-		<font size="5" color=gray>Cultivating Your Path</font>
-		<p>
-		<font size="3" color=gray>Let this Website Guide your Journey to Studying Abroad in the UK</font>
+            <th id="top_table">
+                <marquee id="marquee_text" scrollamount="10">Welcome to my website. I hope this website can assist you on your journey to study abroad in the UK</marquee>
             </th>
         </tr>
         <tr>
-		<th id="blank_table"></th>
-		<th id="me_table" style="font-size: 20px;">
-			about me      
-			
-			<hr width=80% color="gray">
-			<div>
-				<img id="me_image" src="image/me.jpg">
-			</div>
-			<ul style="font-size: 15px;">
-				
-				<li style="font-size: 20px; margin-bottom: 7px;">Education</li>
-				<ul>
-					<li>Department of Electrical Engineering, Chang Gung University</li>
-					<li>Medical Imaging, Yonsei University</li>
-				</ul>
-				<li style="font-size: 20px; margin-bottom: 7px;">Contact Information</li>
-				<ul>
-					<li>Email: B0921211@cgu.edu.tw</li>
-				</ul>
-				<li style="font-size: 20px; margin-bottom: 7px;">Recieved Offers</li>
-				<ul>
-					<li>The University of Glasgow</li>
-					<li>The University of Manchester</li>
-					<li>The University of Birmingham</li>
-					<li>The University of Bristol</li>
-					<li>King's College London</li>
-				</ul>
-			</ul>
-
-			
-		</th>
-		<th id="separate_table"></th>
-		<td id="introduction_table" colspan="3" style="vertical-align: top;">
-			 <div class="content-container">
-				<iframe name="introduction" width=100% height=100% src="home.html">
-				</iframe>
-			</div>
-		</td>
-
-		<th id="blank_table"></th>
-
+            <th id="button_table" colspan="6">
+                <span class="button_links">
+                    <figure>
+                        <a href="index.html">
+                            <img id="button_image" src="image/flag.jpg">
+                        </a>
+                        <figcaption style="font-size:10px; border:0px; color:#7B7B7B;">HOME</figcaption>
+                    </figure>
+                    <a class="button_link" href="flow_web.html" target="introduction">
+                        <button class="button">Application Process</a></button>
+                    <a class="button_link" href="english_web.html" target="introduction"><button class="button">English Test</a></button>
+                    <a class="button_link" href="ranking_web.html" target="introduction"><button class="button">Rankings</a></button>
+                    <a class="button_link" href="document_web.html" target="introduction"><button class="button">Required Documents</a></button>
+                    <a class="button_link" href="about_the_website_web.html" target="introduction"><button class="button">About the Website</a></button>
+                </span>
+            </th>
         </tr>
-	<tr>
-		<th id="footer_blank_table" colspan="7"></th>
-	</tr>
+        <tr id="header_table">
+            <th colspan="7">
+                <img id="header_image" src="image/london_2.jpg">
+                <p>
+                    <font size="5" color=gray>Cultivating Your Path</font>
+                <p>
+                    <font size="3" color=gray>Let this Website Guide your Journey to Studying Abroad in the UK</font>
+            </th>
+        </tr>
         <tr>
-		<th id="footer_table" colspan="7">
-		<div class="footer">
-			<br>
-			YU-WEN, WANG<br>
-			B0921211<br>
-			<p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=vian901214@gmail.com" target="_blank">vian901214@gmail.com</a></p>
-			<p><a href="https://kimchi.yonsei.ac.kr/default/00/01.php" target="_blank">reference website</a></p>
-			
-		</div>
+            <th id="blank_table"></th>
+            <th id="me_table" style="font-size: 20px;">
+                about me
 
-		<hr width=100% color="white">
+                <hr width=80% color="gray">
+                <div>
+                    <img id="me_image" src="image/me.jpg">
+                </div>
+                <ul style="font-size: 15px;">
 
-		<div class="effect-container">
-        		<button class="effect-btn" onclick="showEffect('snow')">Snow Effect</button>
-        		<button class="effect-btn" onclick="showEffect('leaves')">Leaves Effect</button>
-        		<button class="effect-btn" onclick="showEffect('petals')">Petals Effect</button>
-    		</div>
-</th>
-			
-		</div>
+                    <li style="font-size: 20px; margin-bottom: 7px;">Education</li>
+                    <ul>
+                        <li>Department of Electrical Engineering, Chang Gung University</li>
+                        <li>Medical Imaging, Yonsei University</li>
+                    </ul>
+                    <li style="font-size: 20px; margin-bottom: 7px;">Contact Information</li>
+                    <ul>
+                        <li>Email: B0921211@cgu.edu.tw</li>
+                    </ul>
+                    <li style="font-size: 20px; margin-bottom: 7px;">Recieved Offers</li>
+                    <ul>
+                        <li>The University of Glasgow</li>
+                        <li>The University of Manchester</li>
+                        <li>The University of Birmingham</li>
+                        <li>The University of Bristol</li>
+                        <li>King's College London</li>
+                    </ul>
+                </ul>
+
+
+            </th>
+            <th id="separate_table"></th>
+            <td id="introduction_table" colspan="3" style="vertical-align: top;">
+                <div class="content-container">
+                    <iframe name="introduction" width=100% height=100% src="home.html">
+                    </iframe>
+                </div>
+            </td>
+
+            <th id="blank_table"></th>
+
         </tr>
+        <tr>
+            <th id="footer_blank_table" colspan="7"></th>
+        </tr>
+        <tr>
+            <th id="footer_table" colspan="7">
+                <div class="footer">
+                    <br>
+                    YU-WEN, WANG<br>
+                    B0921211<br>
+                    <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=vian901214@gmail.com" target="_blank">vian901214@gmail.com</a></p>
+                    <p><a href="https://kimchi.yonsei.ac.kr/default/00/01.php" target="_blank">reference website</a></p>
+
+                </div>
+
+                <hr width=100% color="white">
+
+                <div class="effect-container">
+                    <button class="effect-btn" onclick="showEffect('snow')">Snow Effect</button>
+                    <button class="effect-btn" onclick="showEffect('leaves')">Leaves Effect</button>
+                    <button class="effect-btn" onclick="showEffect('petals')">Petals Effect</button>
+                    <button class="effect-btn" onclick="stopEffect()">Stop Effects</button>
+                </div>
+            </th>
+
     </table>
 
-	<script>
+    <script>
         var currentEffect = null;
 
         function showEffect(effect) {
-            if (currentEffect) {
-                clearInterval(currentEffect);
-                removeElementsByClass(currentEffect);
-            }
-
+            stopEffect();
             if (effect === 'snow') {
                 currentEffect = setInterval(createSnowflake, 300);
             } else if (effect === 'leaves') {
@@ -379,9 +361,19 @@
             }
         }
 
-        function removeElementsByClass(className){
+        function stopEffect() {
+            if (currentEffect) {
+                clearInterval(currentEffect);
+                currentEffect = null;
+            }
+            removeElementsByClass('snowflake');
+            removeElementsByClass('leaf');
+            removeElementsByClass('petal');
+        }
+
+        function removeElementsByClass(className) {
             var elements = document.getElementsByClassName(className);
-            while(elements.length > 0){
+            while (elements.length > 0) {
                 elements[0].parentNode.removeChild(elements[0]);
             }
         }
@@ -418,6 +410,13 @@
                 petal.remove();
             }, 5000);
         }
+
+        // Start snow effect 10 seconds after page load
+        window.onload = function() {
+            setTimeout(function() {
+                showEffect('snow');
+            }, 10000);
+        };
     </script>
 
 </body>
